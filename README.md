@@ -76,6 +76,9 @@ More automation samples are collected in [**qaa_projects**](https://github.com/z
 - **Real-time 3D virtual tabletop** — Babylon.js client with a clustered lighting pipeline, procedural map generation and a server-authoritative state layer.
 - **Agent tooling** — reusable skills, hooks and verification gates that keep LLM-driven changes reviewable and reversible.
 - **Test infrastructure** — parallel browser grids, flake quarantine and reporting that survives contact with a real release train.
+- 
+## Contacts
+-Tg:https://t.me/zen_Warrior
 
 ## Stats
 
