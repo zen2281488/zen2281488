@@ -18,7 +18,7 @@ I write tests, and I write the machinery that decides whether anything is allowe
 
 Everything below is built on my own time, outside working hours. It is where the AI infrastructure and product engineering happen.
 
-**Harness and infrastructure for AI engineering.** Agent skills, hooks and subagent pipelines around LLM-assisted development. Cost and observability harnesses, verification gates, reversible-change workflows. The goal is a loop that stays measurable: every generated change lands small, behind a gate, with a way back. Same tools and same person before and after, so the only variable is the harness rather than the adoption of AI, and the throughput difference is about an order of magnitude per month. [How it is built, with current figures](engineering/agent-harness.md).
+**Harness and infrastructure for AI engineering.** Agent skills, hooks and subagent pipelines around LLM-assisted development. Cost and observability harnesses, verification gates, reversible-change workflows. The goal is a loop that stays measurable: every generated change lands small, behind a gate, with a way back. Same tools and same person before and after, so the only variable is the harness rather than the adoption of AI, and the throughput difference is about an order of magnitude per month. [How it is built](engineering/agent-harness.md).
 
 **Product engineering.** A real-time 3D web client on Babylon.js and WebGPU with a clustered lighting pipeline and procedural map generation, on a Kotlin and Spring Boot server-authoritative backend. Held to the same CI discipline as the day-job test code, because that is the half I already know how to do properly.
 
@@ -77,16 +77,15 @@ More automation samples live in [**qaa_projects**](https://github.com/zen2281488
 ## Signal
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/signal-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/signal-light.svg">
-  <img src="assets/signal-dark.svg" alt="Contribution and language statistics, private repositories included" width="880">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-one-lyart.vercel.app/api?username=zen2281488&count_private=true&include_all_commits=true&show_icons=true&hide_border=true&bg_color=00000000&title_color=F0883E&icon_color=F0883E&text_color=ADBAC7">
+  <img height="170" src="https://github-readme-stats-one-lyart.vercel.app/api?username=zen2281488&count_private=true&include_all_commits=true&show_icons=true&hide_border=true&bg_color=00000000&title_color=BC4C00&icon_color=BC4C00&text_color=3D444D" alt="GitHub statistics, private contributions counted">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=zen2281488&hide_border=true&background=00000000&ring=F0883E&fire=F0883E&currStreakLabel=F0883E&currStreakNum=E6EDF3&sideNums=E6EDF3&sideLabels=768390&dates=636E7B&stroke=30363D">
+  <img height="170" src="https://streak-stats.demolab.com/?user=zen2281488&hide_border=true&background=00000000&ring=BC4C00&fire=BC4C00&currStreakLabel=BC4C00&currStreakNum=1F2328&sideNums=1F2328&sideLabels=59636E&dates=818B98&stroke=D1D9E0" alt="Contribution streak">
 </picture>
 
-<!-- stats:start -->
 **Most of it is private, and most of it is after hours.** Roughly 30 of my 44 repositories are private, and that is where the harness, the 3D client and the tooling around them live. What is public here is test automation and side projects.
-
-<sub>Card regenerated 2026-08-29 by [scripts/refresh-stats.mjs](scripts/refresh-stats.mjs).</sub>
-<!-- stats:end -->
 
 The volume is a working style, not a metric game. Changes land in small increments behind verification gates rather than as large unreviewed drops, which is what makes the rate survivable. Gate design and the caveats are in [agent-harness.md](engineering/agent-harness.md).
 

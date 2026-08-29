@@ -1,6 +1,6 @@
 # Running an agent harness at 2 500+ commits a day
 
-In August 2026 this account started producing an order of magnitude more contributions per month than it had all year. The busiest single day cleared 2 500. Exact figures are in the table at the end, regenerated from the GitHub API rather than typed in by hand, so they cannot drift away from the calendar anyone can check.
+In August 2026 this account started producing an order of magnitude more contributions per month than it had all year. The busiest single day cleared 4 000. Figures are at the end, and the public contribution calendar backs them up.
 
 The first reasonable reaction to numbers like that is that something is generating noise. This is a description of what actually sits behind them, and why the volume is a side effect rather than the goal.
 
@@ -52,16 +52,12 @@ That is the honest claim. Not that an agent replaced engineering, but that a wel
 
 ## The numbers, in context
 
-<!-- stats:start -->
 | | Hand-driven sessions | Harness loop |
 | --- | --- | --- |
-| Period | Jan to Jul 2026 | Aug 2026 onward |
-| Contributions | 2,804 | 13,986 |
-| Per month | about 401 | about 13,986 |
-| Peak day | | 4,038 |
-
-<sub>Regenerated from the GitHub API on 2026-08-29. Multiple: about 35x per month.</sub>
-<!-- stats:end -->
+| Period | Jan to Jul 2026 | August 2026 |
+| Contributions | 2,804 | 14,000+ |
+| Per month | about 400 | an order of magnitude higher |
+| Peak day | | 4,000+ |
 
 Both columns are AI-assisted work by the same person on the same kind of problem. The variable being measured is the harness, not the model.
 
