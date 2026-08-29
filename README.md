@@ -77,28 +77,20 @@ More automation samples live in [**qaa_projects**](https://github.com/zen2281488
 ## Signal
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=zen2281488&hide_border=true&background=00000000&ring=F0883E&fire=F0883E&currStreakLabel=F0883E&currStreakNum=E6EDF3&sideNums=E6EDF3&sideLabels=768390&dates=636E7B&stroke=30363D">
-  <img height="180" src="https://streak-stats.demolab.com/?user=zen2281488&hide_border=true&background=00000000&ring=BC4C00&fire=BC4C00&currStreakLabel=BC4C00&currStreakNum=1F2328&sideNums=1F2328&sideLabels=59636E&dates=818B98&stroke=D1D9E0" alt="Contribution streak">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=zen2281488&theme=github_dark">
-  <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=zen2281488&theme=github" alt="Most used languages by commit">
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=zen2281488&theme=github_dark&utcOffset=3">
-  <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=zen2281488&theme=github&utcOffset=3" alt="Commit time distribution">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/signal-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/signal-light.svg">
+  <img src="assets/signal-dark.svg" alt="Contribution and language statistics, private repositories included" width="880">
 </picture>
 
 **Most of it is private, and most of it is after hours.**
 
 <!-- stats:start -->
-Of **15 473** contributions so far in 2026, **15 384** (99.4%) landed in private repositories, across roughly 30 of my 44 repos. Those are my own projects rather than employer work: the harness, the 3D client and the tooling around them. What is public here is test automation and side projects. Busiest single day so far: **2 721** on 2026-08-29.
+Of **16 587** contributions in the last 12 months, **16 413** (99.0%) landed in private repositories, across roughly 30 of my 44 repos. Those are my own projects rather than employer work: the harness, the 3D client and the tooling around them. What is public here is test automation and side projects.
 
-<sub>Numbers refreshed 2026-08-29 by [scripts/refresh-stats.mjs](scripts/refresh-stats.mjs).</sub>
+<sub>Card and figures regenerated 2026-08-29 by [scripts/refresh-stats.mjs](scripts/refresh-stats.mjs), counting private repositories. Off-the-shelf widgets cannot see them.</sub>
 <!-- stats:end -->
 
-The widgets above update themselves; the sentence above is regenerated from the GitHub API by a script, so it cannot drift away from the calendar it describes. A profile that argues for automated verification should not be reconciling its own numbers by hand.
+This card is generated rather than embedded from a stats service. Those services can only read public repositories, so they reported a Java and Python profile assembled from old practice repos, which is about 1% of the actual work and contradicts everything else on this page. A profile arguing for verified numbers should not ship numbers it knows are wrong.
 
 The volume is a working style, not a metric game. Changes land in small increments behind verification gates rather than as large unreviewed drops, which is what makes the rate survivable in the first place. The reasoning, the gate design and the honest version of the numbers are in [agent-harness.md](engineering/agent-harness.md).
 

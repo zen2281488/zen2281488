@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="300" viewBox="0 0 880 300" role="img" aria-label="Contribution and language statistics including private repositories">
+  <style>
+    .stat { font: 700 30px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #E6EDF3; letter-spacing: -.5px }
+    .lbl  { font: 400 11px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #768390 }
+    .head { font: 500 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #768390; letter-spacing: 1.2px }
+    .lang { font: 500 12px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #E6EDF3 }
+    .pct  { font: 400 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #768390 }
+    .foot { font: 400 10.5px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #636E7B }
+    .track { fill: #21262D }
+    .bar { fill: #F0883E }
+
+    .fade { opacity: 0; animation: fade .6s cubic-bezier(.16,1,.3,1) forwards }
+    .d1 { animation-delay: .05s } .d2 { animation-delay: .13s } .d3 { animation-delay: .21s } .d4 { animation-delay: .29s }
+    .l1 { animation-delay: .35s } .l2 { animation-delay: .43s } .l3 { animation-delay: .51s }
+    .l4 { animation-delay: .59s } .l5 { animation-delay: .67s } .l6 { animation-delay: .75s }
+    @keyframes fade { from { opacity: 0; transform: translateY(6px) } to { opacity: 1 } }
+
+    @keyframes grow1 { from { width: 0 } to { width: 139px } }
+    .b1 { animation: grow1 .9s cubic-bezier(.16,1,.3,1) 0.35s backwards }
+    @keyframes grow2 { from { width: 0 } to { width: 73px } }
+    .b2 { animation: grow2 .9s cubic-bezier(.16,1,.3,1) 0.43s backwards }
+    @keyframes grow3 { from { width: 0 } to { width: 24px } }
+    .b3 { animation: grow3 .9s cubic-bezier(.16,1,.3,1) 0.51s backwards }
+    @keyframes grow4 { from { width: 0 } to { width: 22px } }
+    .b4 { animation: grow4 .9s cubic-bezier(.16,1,.3,1) 0.59s backwards }
+    @keyframes grow5 { from { width: 0 } to { width: 10px } }
+    .b5 { animation: grow5 .9s cubic-bezier(.16,1,.3,1) 0.6699999999999999s backwards }
+    @keyframes grow6 { from { width: 0 } to { width: 10px } }
+    .b6 { animation: grow6 .9s cubic-bezier(.16,1,.3,1) 0.75s backwards }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade { opacity: 1; animation: none }
+      .bar { animation: none }
+    }
+  </style>
+
+  <g class="fade d1">
+    <text class="stat" x="4" y="52">16 587</text>
+    <text class="lbl" x="4" y="74">contributions, last 12 months</text>
+  </g>
+  <g class="fade d2">
+    <text class="stat" x="218" y="52">99.0%</text>
+    <text class="lbl" x="218" y="74">in private repositories</text>
+  </g>
+  <g class="fade d3">
+    <text class="stat" x="432" y="52">3 748</text>
+    <text class="lbl" x="432" y="74">busiest day (2026-08-29)</text>
+  </g>
+  <g class="fade d4">
+    <text class="stat" x="646" y="52">18d</text>
+    <text class="lbl" x="646" y="74">current streak</text>
+  </g>
+
+  <line x1="4" y1="98" x2="872" y2="98" stroke="#30363D" stroke-width="1" />
+  <text class="head fade d4" x="4" y="116">LANGUAGES BY VOLUME, PRIVATE REPOSITORIES INCLUDED</text>
+
+  <g class="fade l1">
+    <text class="lang" x="4" y="138">TypeScript</text>
+    <rect class="track" x="150" y="127" width="300" height="10" rx="5" />
+    <rect class="bar b1" x="150" y="127" width="139" height="10" rx="5" />
+    <text class="pct" x="462" y="138">46.2%</text>
+  </g>
+  <g class="fade l2">
+    <text class="lang" x="4" y="162">JavaScript</text>
+    <rect class="track" x="150" y="151" width="300" height="10" rx="5" />
+    <rect class="bar b2" x="150" y="151" width="73" height="10" rx="5" />
+    <text class="pct" x="462" y="162">24.4%</text>
+  </g>
+  <g class="fade l3">
+    <text class="lang" x="4" y="186">Python</text>
+    <rect class="track" x="150" y="175" width="300" height="10" rx="5" />
+    <rect class="bar b3" x="150" y="175" width="24" height="10" rx="5" />
+    <text class="pct" x="462" y="186">8.0%</text>
+  </g>
+  <g class="fade l4">
+    <text class="lang" x="4" y="210">Kotlin</text>
+    <rect class="track" x="150" y="199" width="300" height="10" rx="5" />
+    <rect class="bar b4" x="150" y="199" width="22" height="10" rx="5" />
+    <text class="pct" x="462" y="210">7.4%</text>
+  </g>
+  <g class="fade l5">
+    <text class="lang" x="4" y="234">Java</text>
+    <rect class="track" x="150" y="223" width="300" height="10" rx="5" />
+    <rect class="bar b5" x="150" y="223" width="10" height="10" rx="5" />
+    <text class="pct" x="462" y="234">3.4%</text>
+  </g>
+  <g class="fade l6">
+    <text class="lang" x="4" y="258">HTML</text>
+    <rect class="track" x="150" y="247" width="300" height="10" rx="5" />
+    <rect class="bar b6" x="150" y="247" width="10" height="10" rx="5" />
+    <text class="pct" x="462" y="258">3.3%</text>
+  </g>
+
+  <text class="foot" x="4" y="292">Generated 2026-08-29 from the GitHub API. Third-party widgets see public repos only, which is about 1% of this work.</text>
+</svg>
