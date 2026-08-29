@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="190" viewBox="0 0 880 190" role="img" aria-label="zen2281488 - QA Automation and AI Harness Engineering">
+  <style>
+    .name  { font: 700 46px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #E6EDF3; letter-spacing: -1.2px; }
+    .role  { font: 500 17px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #ADBAC7; }
+    .arrow { font: 500 17px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #F0883E; }
+    .node  { font: 500 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #768390; letter-spacing: .5px; }
+    .node-on { fill: #E6EDF3; }
+    .motto { font: 400 13px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #636E7B; }
+
+    .fade  { opacity: 0; animation: fade .7s cubic-bezier(.16,1,.3,1) forwards; }
+    .d1 { animation-delay: .05s } .d2 { animation-delay: .25s } .d3 { animation-delay: 1.5s }
+    @keyframes fade { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
+
+    .rail { stroke: #30363D; stroke-width: 2; stroke-linecap: round;
+            stroke-dasharray: 620; stroke-dashoffset: 620;
+            animation: draw 1.3s cubic-bezier(.16,1,.3,1) .45s forwards; }
+    @keyframes draw { to { stroke-dashoffset: 0 } }
+
+    .dot { opacity: 0; animation: pop .45s cubic-bezier(.16,1,.3,1) forwards; }
+    .p1 { animation-delay: .70s } .p2 { animation-delay: .95s } .p3 { animation-delay: 1.20s } .p4 { animation-delay: 1.45s }
+    @keyframes pop { from { opacity: 0; r: 1 } to { opacity: 1 } }
+
+    .live { transform-origin: 628px 132px; animation: beat 2.6s ease-in-out 1.9s infinite; }
+    @keyframes beat { 0%,100% { opacity: .35; transform: scale(1) } 50% { opacity: 0; transform: scale(2.6) } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade, .dot { opacity: 1; animation: none }
+      .rail { stroke-dashoffset: 0; animation: none }
+      .live { animation: none; opacity: .35 }
+    }
+  </style>
+
+  <text class="name fade d1" x="0" y="52">zen2281488</text>
+
+  <g class="fade d2">
+    <text class="role" x="2" y="84">QA Automation <tspan class="arrow">→</tspan> harness and infrastructure for AI engineering</text>
+  </g>
+
+  <line class="rail" x1="8" y1="132" x2="628" y2="132" />
+
+  <g class="dot p1"><circle cx="8"   cy="132" r="5" fill="#F0883E" /></g>
+  <g class="dot p2"><circle cx="214" cy="132" r="5" fill="#F0883E" /></g>
+  <g class="dot p3"><circle cx="420" cy="132" r="5" fill="#F0883E" /></g>
+  <g class="dot p4"><circle cx="628" cy="132" r="5" fill="#F0883E" /></g>
+  <circle class="live" cx="628" cy="132" r="5" fill="#F0883E" />
+
+  <text class="node fade p1" x="8"   y="158">SPEC</text>
+  <text class="node fade p2" x="214" y="158">AGENT LOOP</text>
+  <text class="node fade p3" x="420" y="158">GATES</text>
+  <text class="node node-on fade p4" x="628" y="158">SHIP</text>
+
+  <text class="motto fade d3" x="878" y="52" text-anchor="end">Generation is cheap.</text>
+  <text class="motto fade d3" x="878" y="72" text-anchor="end">Verification is the product.</text>
+</svg>
