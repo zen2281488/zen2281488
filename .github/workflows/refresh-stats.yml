@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Regenerate contribution numbers
+      - name: Regenerate contribution numbers and the Signal card
         env:
           # The built-in GITHUB_TOKEN cannot read restrictedContributionsCount,
           # so private contributions would silently come back as zero. This needs
@@ -38,6 +38,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md engineering/agent-harness.md
+          git add README.md engineering/agent-harness.md assets/signal-dark.svg assets/signal-light.svg
           git commit -m "chore: refresh contribution numbers"
           git push
