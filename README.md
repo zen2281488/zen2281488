@@ -18,7 +18,7 @@ I write tests, and I write the machinery that decides whether anything is allowe
 
 Everything below is built on my own time, outside working hours. It is where the AI infrastructure and product engineering happen.
 
-**Harness and infrastructure for AI engineering.** Agent skills, hooks and subagent pipelines around LLM-assisted development. Cost and observability harnesses, verification gates, reversible-change workflows. The goal is a loop that stays measurable: every generated change lands small, behind a gate, with a way back. Same tools and same person before and after, so the only variable is the harness: hand-driven agent sessions averaged about 400 contributions a month, the harness loop did 12 489 in August. [How it is built](engineering/agent-harness.md).
+**Harness and infrastructure for AI engineering.** Agent skills, hooks and subagent pipelines around LLM-assisted development. Cost and observability harnesses, verification gates, reversible-change workflows. The goal is a loop that stays measurable: every generated change lands small, behind a gate, with a way back. Same tools and same person before and after, so the only variable is the harness rather than the adoption of AI, and the throughput difference is about an order of magnitude per month. [How it is built, with current figures](engineering/agent-harness.md).
 
 **Product engineering.** A real-time 3D web client on Babylon.js and WebGPU with a clustered lighting pipeline and procedural map generation, on a Kotlin and Spring Boot server-authoritative backend. Held to the same CI discipline as the day-job test code, because that is the half I already know how to do properly.
 
@@ -60,7 +60,7 @@ Everything below is built on my own time, outside working hours. It is where the
 
 | | |
 | --- | --- |
-| [**Running an agent harness at 2 533 commits a day**](engineering/agent-harness.md) | Why the bottleneck in AI-assisted engineering is disproving a change, not generating one. Gate design, domain oracles, adversarial review, and the before-and-after numbers with the caveats attached. |
+| [**Running an agent harness at 2 500+ commits a day**](engineering/agent-harness.md) | Why the bottleneck in AI-assisted engineering is disproving a change, not generating one. Gate design, domain oracles, adversarial review, and the before-and-after numbers with the caveats attached. |
 | [**Field notes**](engineering/field-notes.md) | Five debugging results: an 8.1 MB payload caused by a shared module in the wrong chunk, clustered lighting that was never once enabled, a golden frame pinned but not reproducible, a CI probe measuring the wrong endpoint, and a scatter kernel that could not be tuned because it was structurally incapable. |
 
 ## Selected work
@@ -90,7 +90,15 @@ More automation samples live in [**qaa_projects**](https://github.com/zen2281488
   <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=zen2281488&theme=github&utcOffset=3" alt="Commit time distribution">
 </picture>
 
-**Most of it is private, and most of it is after hours.** Of 15 326 contributions so far in 2026, 15 240 landed in private repositories, across roughly 29 of my 43 repos. Those are my own projects rather than employer work: the harness, the 3D client and the tooling around them. What is public here is test automation and side projects.
+**Most of it is private, and most of it is after hours.**
+
+<!-- stats:start -->
+Of **15 456** contributions so far in 2026, **15 368** (99.4%) landed in private repositories, across roughly 30 of my 44 repos. Those are my own projects rather than employer work: the harness, the 3D client and the tooling around them. What is public here is test automation and side projects. Busiest single day so far: **2 704** on 2026-08-29.
+
+<sub>Numbers refreshed 2026-08-29 by [scripts/refresh-stats.mjs](scripts/refresh-stats.mjs).</sub>
+<!-- stats:end -->
+
+The widgets above update themselves; the sentence above is regenerated from the GitHub API by a script, so it cannot drift away from the calendar it describes. A profile that argues for automated verification should not be reconciling its own numbers by hand.
 
 The volume is a working style, not a metric game. Changes land in small increments behind verification gates rather than as large unreviewed drops, which is what makes the rate survivable in the first place. The reasoning, the gate design and the honest version of the numbers are in [agent-harness.md](engineering/agent-harness.md).
 

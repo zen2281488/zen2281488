@@ -1,0 +1,43 @@
+name: Refresh profile stats
+
+# Manual trigger only, on purpose. Actions are currently unavailable on this
+# account, and a scheduled workflow that cannot start would post a daily
+# startup_failure to the Actions tab. Once Actions are restored, uncomment the
+# schedule block below and this keeps the README numbers in sync on its own.
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "17 4 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Regenerate contribution numbers
+        env:
+          # The built-in GITHUB_TOKEN cannot read restrictedContributionsCount,
+          # so private contributions would silently come back as zero. This needs
+          # a user PAT with read:user, stored as the STATS_TOKEN secret.
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN }}
+        run: node scripts/refresh-stats.mjs
+
+      - name: Commit if the numbers moved
+        run: |
+          if git diff --quiet; then
+            echo "Numbers unchanged, nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md engineering/agent-harness.md
+          git commit -m "chore: refresh contribution numbers"
+          git push

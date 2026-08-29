@@ -1,8 +1,8 @@
-# Running an agent harness at 2 533 commits a day
+# Running an agent harness at 2 500+ commits a day
 
-August 2026 produced 12 489 contributions on this account. The seven months before it produced 2 804. The peak single day was 2 533.
+In August 2026 this account started producing an order of magnitude more contributions per month than it had all year. The busiest single day cleared 2 500. Exact figures are in the table at the end, regenerated from the GitHub API rather than typed in by hand, so they cannot drift away from the calendar anyone can check.
 
-Those numbers are public on my contribution calendar, so the first reasonable reaction is that something is generating noise. This is a description of what actually sits behind them, and why the volume is a side effect rather than the goal.
+The first reasonable reaction to numbers like that is that something is generating noise. This is a description of what actually sits behind them, and why the volume is a side effect rather than the goal.
 
 The comparison worth making is not before and after adopting AI. Both sides of that jump are AI-assisted: the earlier months were plain Claude Code and GPT sessions, driven by hand, one conversation at a time. Same tools, same person, same codebase. What changed in August is that the loop around the model became machinery instead of a chat window.
 
@@ -52,15 +52,19 @@ That is the honest claim. Not that an agent replaced engineering, but that a wel
 
 ## The numbers, in context
 
-| | Jan to Jul 2026 | Aug 2026 |
+<!-- stats:start -->
+| | Hand-driven sessions | Harness loop |
 | --- | --- | --- |
-| Mode | agent sessions driven by hand | harness loop |
-| Contributions | 2 804 | 12 489 |
-| Per month | about 400 | 12 489 |
-| Peak day | | 2 533 |
+| Period | Jan to Jul 2026 | Aug 2026 onward |
+| Contributions | 2 804 | 12 652 |
+| Per month | about 401 | about 12 652 |
+| Peak day | | 2 704 |
+
+<sub>Regenerated from the GitHub API on 2026-08-29. Multiple: about 32x per month.</sub>
+<!-- stats:end -->
 
 Both columns are AI-assisted work by the same person on the same kind of problem. The variable being measured is the harness, not the model.
 
-The multiple is roughly thirty. I do not read that as thirty times the output, because a hand-driven session batches more work into each commit. I read it as the verification bottleneck moving: when disproving a change stops costing human attention, the loop stops waiting for me.
+I do not read the multiple as that many times the output, because a hand-driven session batches more work into each commit. I read it as the verification bottleneck moving: when disproving a change stops costing human attention, the loop stops waiting for me.
 
 What the volume is not is unreviewed. The commits are small, gated and revertible by construction. If they were not, the loop would have collapsed under its own defect rate long before reaching this volume, and the interesting artefact here is precisely that it did not.
