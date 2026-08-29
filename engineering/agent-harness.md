@@ -56,9 +56,9 @@ That is the honest claim. Not that an agent replaced engineering, but that a wel
 | | Hand-driven sessions | Harness loop |
 | --- | --- | --- |
 | Period | Jan to Jul 2026 | Aug 2026 onward |
-| Contributions | 2 804 | 12 652 |
-| Per month | about 401 | about 12 652 |
-| Peak day | | 2 704 |
+| Contributions | 2 804 | 12 669 |
+| Per month | about 401 | about 12 669 |
+| Peak day | | 2 721 |
 
 <sub>Regenerated from the GitHub API on 2026-08-29. Multiple: about 32x per month.</sub>
 <!-- stats:end -->

@@ -151,13 +151,17 @@ for (const { file, content } of targets) {
     continue;
   }
   stale = true;
-  if (!CHECK_ONLY) writeFileSync(file, next);
+  if (CHECK_ONLY) {
+    console.log(`${file}: stale, would be rewritten.`);
+    continue;
+  }
+  writeFileSync(file, next);
   console.log(`${file}: updated.`);
 }
 
 if (CHECK_ONLY && stale) {
   console.error("Numbers are stale. Run without --check to update.");
-  process.exit(1);
+  process.exitCode = 1;
 }
 
 console.log(
