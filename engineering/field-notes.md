@@ -1,6 +1,6 @@
 # Field notes
 
-Five debugging results from the last year, kept because each one broke an assumption rather than a line of code. Product details are omitted; the mechanics are the point.
+Five debugging results from the last year, kept because each one broke an assumption rather than a line of code. All of these come from my own projects, not from employer work, and product details are omitted either way. The mechanics are the point.
 
 ## A page shipped 8.1 MB because a shared module sat in the wrong chunk
 

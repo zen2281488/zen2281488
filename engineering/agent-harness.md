@@ -6,6 +6,8 @@ Those numbers are public on my contribution calendar, so the first reasonable re
 
 The comparison worth making is not before and after adopting AI. Both sides of that jump are AI-assisted: the earlier months were plain Claude Code and GPT sessions, driven by hand, one conversation at a time. Same tools, same person, same codebase. What changed in August is that the loop around the model became machinery instead of a chat window.
 
+One thing to state plainly up front: this is independent work. My paid job is QA automation in Java, and the harness described here was built outside it, on my own projects and my own time. The test-engineering instincts come from the day job. The harness is what happened when I pointed those instincts at generated code instead of human code.
+
 ## The problem the harness solves
 
 Most teams already have the models. Everyone has a coding agent, and the productivity curve still looks flat. That is the interesting problem, and it is not a model-quality problem.
@@ -44,7 +46,7 @@ Each unit of work moves through fixed stages, and a stage that fails sends the w
 
 ## What it produced
 
-The main consumer of this harness has been a real-time 3D web client with a server-authoritative backend: clustered lighting, procedural map generation, a full scene editor, multi-user session state and its own asset pipeline. Scope that would normally be read as a multi-year effort for one person went from empty repository to working product in a few months, with the harness carrying implementation and verification while I carried architecture, acceptance criteria and the calls that need judgement.
+The main consumer of this harness has been a personal project: a real-time 3D web client with a server-authoritative backend, covering clustered lighting, procedural map generation, a full scene editor, multi-user session state and its own asset pipeline. Scope of the kind normally read as a multi-year effort for one person went from empty repository to working product in a few months of evenings and weekends, with the harness carrying implementation and verification while I carried architecture, acceptance criteria and the calls that need judgement.
 
 That is the honest claim. Not that an agent replaced engineering, but that a well-instrumented loop moves the bottleneck from typing to deciding, and one person's judgement can cover far more surface than one person's hands.
 

@@ -10,13 +10,17 @@
 
 I write tests, and I write the machinery that decides whether anything is allowed to ship. Lately most of that machinery is pointed at AI-assisted development: agent harnesses, verification gates, and the infrastructure that keeps a generated diff reviewable.
 
-## What I work on
+## Day job
 
-**Verification harness.** UI and API automation in Java: Selenide, REST Assured, JUnit 5, TestNG. Wired into pipelines so a red run blocks a merge instead of decorating a dashboard. Parallel browser grids, flake quarantine, and Allure reporting that survives contact with a real release train.
+**QA Automation Engineer, Java.** UI and API automation: Selenide, REST Assured, JUnit 5, TestNG, wired into pipelines so a red run blocks a merge instead of decorating a dashboard. Parallel browser grids, flake quarantine, and Allure reporting that survives contact with a real release train. This is the paid, professional half and it is where the test-engineering discipline comes from.
 
-**Infrastructure for AI engineering.** Agent skills, hooks and subagent pipelines around LLM-assisted development. Cost and observability harnesses, verification gates, reversible-change workflows. The goal is a loop that stays measurable: every generated change lands small, behind a gate, with a way back. Same tools and same person before and after, so the only variable is the harness: hand-driven agent sessions averaged about 400 contributions a month, the harness loop did 12 489 in August. [How it is built](engineering/agent-harness.md).
+## Independent work
 
-**Product engineering.** A real-time 3D web client on Babylon.js and WebGPU with a clustered lighting pipeline and procedural map generation, on a Kotlin and Spring Boot server-authoritative backend. Held to the same CI discipline as the test code.
+Everything below is built on my own time, outside working hours. It is where the AI infrastructure and product engineering happen.
+
+**Harness and infrastructure for AI engineering.** Agent skills, hooks and subagent pipelines around LLM-assisted development. Cost and observability harnesses, verification gates, reversible-change workflows. The goal is a loop that stays measurable: every generated change lands small, behind a gate, with a way back. Same tools and same person before and after, so the only variable is the harness: hand-driven agent sessions averaged about 400 contributions a month, the harness loop did 12 489 in August. [How it is built](engineering/agent-harness.md).
+
+**Product engineering.** A real-time 3D web client on Babylon.js and WebGPU with a clustered lighting pipeline and procedural map generation, on a Kotlin and Spring Boot server-authoritative backend. Held to the same CI discipline as the day-job test code, because that is the half I already know how to do properly.
 
 ## Stack
 
@@ -86,7 +90,7 @@ More automation samples live in [**qaa_projects**](https://github.com/zen2281488
   <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=zen2281488&theme=github&utcOffset=3" alt="Commit time distribution">
 </picture>
 
-**Most of the work is private.** Of 15 326 contributions so far in 2026, 15 240 landed in private repositories, across roughly 29 of my 43 repos. What is public here is test automation, tooling and side projects.
+**Most of it is private, and most of it is after hours.** Of 15 326 contributions so far in 2026, 15 240 landed in private repositories, across roughly 29 of my 43 repos. Those are my own projects rather than employer work: the harness, the 3D client and the tooling around them. What is public here is test automation and side projects.
 
 The volume is a working style, not a metric game. Changes land in small increments behind verification gates rather than as large unreviewed drops, which is what makes the rate survivable in the first place. The reasoning, the gate design and the honest version of the numbers are in [agent-harness.md](engineering/agent-harness.md).
 
