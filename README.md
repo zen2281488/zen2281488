@@ -82,17 +82,13 @@ More automation samples live in [**qaa_projects**](https://github.com/zen2281488
   <img src="assets/signal-dark.svg" alt="Contribution and language statistics, private repositories included" width="880">
 </picture>
 
-**Most of it is private, and most of it is after hours.**
-
 <!-- stats:start -->
-Of **16 587** contributions in the last 12 months, **16 413** (99.0%) landed in private repositories, across roughly 30 of my 44 repos. Those are my own projects rather than employer work: the harness, the 3D client and the tooling around them. What is public here is test automation and side projects.
+**Most of it is private, and most of it is after hours.** Roughly 30 of my 44 repositories are private, and that is where the harness, the 3D client and the tooling around them live. What is public here is test automation and side projects.
 
-<sub>Card and figures regenerated 2026-08-29 by [scripts/refresh-stats.mjs](scripts/refresh-stats.mjs), counting private repositories. Off-the-shelf widgets cannot see them.</sub>
+<sub>Card regenerated 2026-08-29 by [scripts/refresh-stats.mjs](scripts/refresh-stats.mjs).</sub>
 <!-- stats:end -->
 
-This card is generated rather than embedded from a stats service. Those services can only read public repositories, so they reported a Java and Python profile assembled from old practice repos, which is about 1% of the actual work and contradicts everything else on this page. A profile arguing for verified numbers should not ship numbers it knows are wrong.
-
-The volume is a working style, not a metric game. Changes land in small increments behind verification gates rather than as large unreviewed drops, which is what makes the rate survivable in the first place. The reasoning, the gate design and the honest version of the numbers are in [agent-harness.md](engineering/agent-harness.md).
+The volume is a working style, not a metric game. Changes land in small increments behind verification gates rather than as large unreviewed drops, which is what makes the rate survivable. Gate design and the caveats are in [agent-harness.md](engineering/agent-harness.md).
 
 ## Contact
 

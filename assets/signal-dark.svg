@@ -1,95 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="300" viewBox="0 0 880 300" role="img" aria-label="Contribution and language statistics including private repositories">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="186" viewBox="0 0 880 186" role="img" aria-label="Contribution statistics and language breakdown, private repositories included">
   <style>
-    .stat { font: 700 30px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #E6EDF3; letter-spacing: -.5px }
-    .lbl  { font: 400 11px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #768390 }
-    .head { font: 500 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #768390; letter-spacing: 1.2px }
-    .lang { font: 500 12px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #E6EDF3 }
-    .pct  { font: 400 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #768390 }
+    .stat { font: 700 32px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #E6EDF3; letter-spacing: -1px }
+    .lbl  { font: 400 11.5px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #768390 }
+    .leg  { font: 400 12px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #768390 }
     .foot { font: 400 10.5px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #636E7B }
-    .track { fill: #21262D }
-    .bar { fill: #F0883E }
 
-    .fade { opacity: 0; animation: fade .6s cubic-bezier(.16,1,.3,1) forwards }
-    .d1 { animation-delay: .05s } .d2 { animation-delay: .13s } .d3 { animation-delay: .21s } .d4 { animation-delay: .29s }
-    .l1 { animation-delay: .35s } .l2 { animation-delay: .43s } .l3 { animation-delay: .51s }
-    .l4 { animation-delay: .59s } .l5 { animation-delay: .67s } .l6 { animation-delay: .75s }
-    @keyframes fade { from { opacity: 0; transform: translateY(6px) } to { opacity: 1 } }
+    .fade { opacity: 0; animation: fade .55s cubic-bezier(.16,1,.3,1) forwards }
+    .d1 { animation-delay: .04s } .d2 { animation-delay: .11s } .d3 { animation-delay: .18s } .d4 { animation-delay: .25s }
+    .g1 { animation-delay: .60s } .g2 { animation-delay: .66s } .g3 { animation-delay: .72s }
+    .g4 { animation-delay: .78s } .g5 { animation-delay: .84s } .g6 { animation-delay: .90s }
+    @keyframes fade { from { opacity: 0; transform: translateY(5px) } to { opacity: 1 } }
 
-    @keyframes grow1 { from { width: 0 } to { width: 139px } }
-    .b1 { animation: grow1 .9s cubic-bezier(.16,1,.3,1) 0.35s backwards }
-    @keyframes grow2 { from { width: 0 } to { width: 73px } }
-    .b2 { animation: grow2 .9s cubic-bezier(.16,1,.3,1) 0.43s backwards }
-    @keyframes grow3 { from { width: 0 } to { width: 24px } }
-    .b3 { animation: grow3 .9s cubic-bezier(.16,1,.3,1) 0.51s backwards }
-    @keyframes grow4 { from { width: 0 } to { width: 22px } }
-    .b4 { animation: grow4 .9s cubic-bezier(.16,1,.3,1) 0.59s backwards }
-    @keyframes grow5 { from { width: 0 } to { width: 10px } }
-    .b5 { animation: grow5 .9s cubic-bezier(.16,1,.3,1) 0.6699999999999999s backwards }
-    @keyframes grow6 { from { width: 0 } to { width: 10px } }
-    .b6 { animation: grow6 .9s cubic-bezier(.16,1,.3,1) 0.75s backwards }
+    @keyframes grow1 { from { width: 0 } to { width: 402.7px } }
+    .s1 { animation: grow1 .8s cubic-bezier(.16,1,.3,1) 0.30s backwards }
+    @keyframes grow2 { from { width: 0 } to { width: 212.6px } }
+    .s2 { animation: grow2 .8s cubic-bezier(.16,1,.3,1) 0.37s backwards }
+    @keyframes grow3 { from { width: 0 } to { width: 70.9px } }
+    .s3 { animation: grow3 .8s cubic-bezier(.16,1,.3,1) 0.44s backwards }
+    @keyframes grow4 { from { width: 0 } to { width: 64.5px } }
+    .s4 { animation: grow4 .8s cubic-bezier(.16,1,.3,1) 0.51s backwards }
+    @keyframes grow5 { from { width: 0 } to { width: 29.3px } }
+    .s5 { animation: grow5 .8s cubic-bezier(.16,1,.3,1) 0.58s backwards }
+    @keyframes grow6 { from { width: 0 } to { width: 28.9px } }
+    .s6 { animation: grow6 .8s cubic-bezier(.16,1,.3,1) 0.65s backwards }
 
     @media (prefers-reduced-motion: reduce) {
       .fade { opacity: 1; animation: none }
-      .bar { animation: none }
+      .seg { animation: none }
     }
   </style>
 
   <g class="fade d1">
-    <text class="stat" x="4" y="52">16 587</text>
-    <text class="lbl" x="4" y="74">contributions, last 12 months</text>
+    <text class="stat" x="4" y="48">16,877</text>
+    <text class="lbl" x="4" y="68">contributions, 12 months</text>
   </g>
   <g class="fade d2">
-    <text class="stat" x="218" y="52">99.0%</text>
-    <text class="lbl" x="218" y="74">in private repositories</text>
+    <text class="stat" x="222" y="48">99.0%</text>
+    <text class="lbl" x="222" y="68">private</text>
   </g>
   <g class="fade d3">
-    <text class="stat" x="432" y="52">3 748</text>
-    <text class="lbl" x="432" y="74">busiest day (2026-08-29)</text>
+    <text class="stat" x="440" y="48">4,038</text>
+    <text class="lbl" x="440" y="68">busiest day, 2026-08-29</text>
   </g>
   <g class="fade d4">
-    <text class="stat" x="646" y="52">18d</text>
-    <text class="lbl" x="646" y="74">current streak</text>
+    <text class="stat" x="658" y="48">18d</text>
+    <text class="lbl" x="658" y="68">current streak</text>
   </g>
 
-  <line x1="4" y1="98" x2="872" y2="98" stroke="#30363D" stroke-width="1" />
-  <text class="head fade d4" x="4" y="116">LANGUAGES BY VOLUME, PRIVATE REPOSITORIES INCLUDED</text>
+  <line x1="4" y1="94" x2="876" y2="94" stroke="#30363D" stroke-width="1" />
 
-  <g class="fade l1">
-    <text class="lang" x="4" y="138">TypeScript</text>
-    <rect class="track" x="150" y="127" width="300" height="10" rx="5" />
-    <rect class="bar b1" x="150" y="127" width="139" height="10" rx="5" />
-    <text class="pct" x="462" y="138">46.2%</text>
-  </g>
-  <g class="fade l2">
-    <text class="lang" x="4" y="162">JavaScript</text>
-    <rect class="track" x="150" y="151" width="300" height="10" rx="5" />
-    <rect class="bar b2" x="150" y="151" width="73" height="10" rx="5" />
-    <text class="pct" x="462" y="162">24.4%</text>
-  </g>
-  <g class="fade l3">
-    <text class="lang" x="4" y="186">Python</text>
-    <rect class="track" x="150" y="175" width="300" height="10" rx="5" />
-    <rect class="bar b3" x="150" y="175" width="24" height="10" rx="5" />
-    <text class="pct" x="462" y="186">8.0%</text>
-  </g>
-  <g class="fade l4">
-    <text class="lang" x="4" y="210">Kotlin</text>
-    <rect class="track" x="150" y="199" width="300" height="10" rx="5" />
-    <rect class="bar b4" x="150" y="199" width="22" height="10" rx="5" />
-    <text class="pct" x="462" y="210">7.4%</text>
-  </g>
-  <g class="fade l5">
-    <text class="lang" x="4" y="234">Java</text>
-    <rect class="track" x="150" y="223" width="300" height="10" rx="5" />
-    <rect class="bar b5" x="150" y="223" width="10" height="10" rx="5" />
-    <text class="pct" x="462" y="234">3.4%</text>
-  </g>
-  <g class="fade l6">
-    <text class="lang" x="4" y="258">HTML</text>
-    <rect class="track" x="150" y="247" width="300" height="10" rx="5" />
-    <rect class="bar b6" x="150" y="247" width="10" height="10" rx="5" />
-    <text class="pct" x="462" y="258">3.3%</text>
+  <g transform="translate(0,122)" clip-path="inset(0 round 5)">
+    <rect class="seg s1" x="4.0" y="0" width="402.7" height="10" fill="#3178C6" />
+    <rect class="seg s2" x="406.7" y="0" width="212.6" height="10" fill="#F1E05A" />
+    <rect class="seg s3" x="619.3" y="0" width="70.9" height="10" fill="#3572A5" />
+    <rect class="seg s4" x="690.2" y="0" width="64.5" height="10" fill="#A97BFF" />
+    <rect class="seg s5" x="754.7" y="0" width="29.3" height="10" fill="#B07219" />
+    <rect class="seg s6" x="784.0" y="0" width="28.9" height="10" fill="#E34C26" />
+    <rect class="seg s0" x="812.9" y="0" width="63.1" height="10" fill="#21262D" />
   </g>
 
-  <text class="foot" x="4" y="292">Generated 2026-08-29 from the GitHub API. Third-party widgets see public repos only, which is about 1% of this work.</text>
+  <g transform="translate(0,158)">
+  <g class="fade g1">
+    <circle cx="9.0" cy="-4" r="5" fill="#3178C6" />
+    <text class="leg" x="21.0" y="0">TypeScript 46.2%</text>
+  </g>
+  <g class="fade g2">
+    <circle cx="141.4" cy="-4" r="5" fill="#F1E05A" />
+    <text class="leg" x="153.4" y="0">JavaScript 24.4%</text>
+  </g>
+  <g class="fade g3">
+    <circle cx="273.8" cy="-4" r="5" fill="#3572A5" />
+    <text class="leg" x="285.8" y="0">Python 8.1%</text>
+  </g>
+  <g class="fade g4">
+    <circle cx="375.5" cy="-4" r="5" fill="#A97BFF" />
+    <text class="leg" x="387.5" y="0">Kotlin 7.4%</text>
+  </g>
+  <g class="fade g5">
+    <circle cx="477.1" cy="-4" r="5" fill="#B07219" />
+    <text class="leg" x="489.1" y="0">Java 3.4%</text>
+  </g>
+  <g class="fade g6">
+    <circle cx="566.5" cy="-4" r="5" fill="#E34C26" />
+    <text class="leg" x="578.5" y="0">HTML 3.3%</text>
+  </g>
+  </g>
+
+  <text class="foot" x="876" y="68" text-anchor="end">private repositories included</text>
 </svg>

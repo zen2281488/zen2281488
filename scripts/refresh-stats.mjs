@@ -149,17 +149,18 @@ const harnessMonths = Math.max(1, (now - new Date(HARNESS_FROM)) / (1000 * 60 * 
 const harnessPerMonth = Math.round(harness / harnessMonths);
 const multiple = Math.round(harnessPerMonth / baselinePerMonth);
 
-const fmt = (n) => n.toLocaleString("en-US").replace(/,/g, " ");
+const fmt = (n) => n.toLocaleString("en-US");
 const asOf = today;
 
 const card = { total, private: priv, share, peak, streak, languages, asOf };
 
 const readmeBlock =
-  `Of **${fmt(total)}** contributions in the last 12 months, **${fmt(priv)}** (${share}%) landed in private repositories, ` +
-  `across roughly ${privateRepos} of my ${allRepos} repos. Those are my own projects rather than employer work: ` +
-  `the harness, the 3D client and the tooling around them. What is public here is test automation and side projects.` +
-  `\n\n<sub>Card and figures regenerated ${asOf} by [scripts/refresh-stats.mjs](scripts/refresh-stats.mjs), ` +
-  `counting private repositories. Off-the-shelf widgets cannot see them.</sub>`;
+  `**Most of it is private, and most of it is after hours.** Roughly ${privateRepos} of my ${allRepos} repositories ` +
+  `are private, and that is where the harness, the 3D client and the tooling around them live. What is public here ` +
+  `is test automation and side projects.` +
+  `
+
+<sub>Card regenerated ${asOf} by [scripts/refresh-stats.mjs](scripts/refresh-stats.mjs).</sub>`;
 
 const harnessBlock = [
   "| | Hand-driven sessions | Harness loop |",
