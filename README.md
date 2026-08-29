@@ -14,7 +14,7 @@ I write tests, and I write the machinery that decides whether anything is allowe
 
 **Verification harness.** UI and API automation in Java: Selenide, REST Assured, JUnit 5, TestNG. Wired into pipelines so a red run blocks a merge instead of decorating a dashboard. Parallel browser grids, flake quarantine, and Allure reporting that survives contact with a real release train.
 
-**Infrastructure for AI engineering.** Agent skills, hooks and subagent pipelines around LLM-assisted development. Cost and observability harnesses, verification gates, reversible-change workflows. The goal is a loop that stays measurable: every generated change lands small, behind a gate, with a way back.
+**Infrastructure for AI engineering.** Agent skills, hooks and subagent pipelines around LLM-assisted development. Cost and observability harnesses, verification gates, reversible-change workflows. The goal is a loop that stays measurable: every generated change lands small, behind a gate, with a way back. Same tools and same person before and after, so the only variable is the harness: hand-driven agent sessions averaged about 400 contributions a month, the harness loop did 12 489 in August. [How it is built](engineering/agent-harness.md).
 
 **Product engineering.** A real-time 3D web client on Babylon.js and WebGPU with a clustered lighting pipeline and procedural map generation, on a Kotlin and Spring Boot server-authoritative backend. Held to the same CI discipline as the test code.
 
@@ -52,6 +52,13 @@ I write tests, and I write the machinery that decides whether anything is allowe
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-1F2328?style=flat-square&logo=postgresql&logoColor=white)
 ![Greenplum](https://img.shields.io/badge/Greenplum-1F2328?style=flat-square)
 
+## Writing
+
+| | |
+| --- | --- |
+| [**Running an agent harness at 2 533 commits a day**](engineering/agent-harness.md) | Why the bottleneck in AI-assisted engineering is disproving a change, not generating one. Gate design, domain oracles, adversarial review, and the before-and-after numbers with the caveats attached. |
+| [**Field notes**](engineering/field-notes.md) | Five debugging results: an 8.1 MB payload caused by a shared module in the wrong chunk, clustered lighting that was never once enabled, a golden frame pinned but not reproducible, a CI probe measuring the wrong endpoint, and a scatter kernel that could not be tuned because it was structurally incapable. |
+
 ## Selected work
 
 | Repo | What it is | Stack |
@@ -79,9 +86,9 @@ More automation samples live in [**qaa_projects**](https://github.com/zen2281488
   <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=zen2281488&theme=github&utcOffset=3" alt="Commit time distribution">
 </picture>
 
-**Most of the work is private.** Of 15 023 contributions in 2026, 14 938 landed in private repositories, across roughly 29 of my 43 repos. The public half here is test automation, tooling and side projects.
+**Most of the work is private.** Of 15 326 contributions so far in 2026, 15 240 landed in private repositories, across roughly 29 of my 43 repos. What is public here is test automation, tooling and side projects.
 
-The volume is a working style, not a metric game: I run an agent-assisted loop, so changes land in small increments behind verification gates rather than in large unreviewed drops.
+The volume is a working style, not a metric game. Changes land in small increments behind verification gates rather than as large unreviewed drops, which is what makes the rate survivable in the first place. The reasoning, the gate design and the honest version of the numbers are in [agent-harness.md](engineering/agent-harness.md).
 
 ## Contact
 
