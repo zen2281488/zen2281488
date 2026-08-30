@@ -2,26 +2,26 @@
   <title id="title">Closed-loop agent harness</title>
   <desc id="desc">Work moves from brief through research, implementation, verification, review, merge and observation, then feeds back into the next brief.</desc>
   <style>
-    .title { font: 650 21px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #1F2328; letter-spacing: -.4px; }
-    .sub { font: 400 13px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #59636E; }
-    .label { font: 600 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #59636E; letter-spacing: .8px; }
-    .center { font: 600 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #1F2328; letter-spacing: 1.2px; }
-    .center-sub { font: 400 12px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #59636E; }
-    .loop-base { fill: none; stroke: #D1D9E0; stroke-width: 2; path-length: 100; stroke-dasharray: 100; stroke-dashoffset: 100; animation: draw 1.1s cubic-bezier(.16,1,.3,1) .2s forwards; }
-    .trace { fill: none; stroke: #BC4C00; stroke-width: 2.5; stroke-linecap: round; path-length: 100; stroke-dasharray: 8 92; opacity: 0; animation: trace-in .01s linear 1.25s forwards, travel 8s linear 1.25s infinite; }
-    .node { fill: #FFFFFF; stroke: #818B98; stroke-width: 1.5; opacity: 0; animation: node-in .35s cubic-bezier(.16,1,.3,1) forwards; }
+    .title { font: 650 21px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #E6EDF3; letter-spacing: -.4px; }
+    .sub { font: 400 13px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #768390; }
+    .label { font: 600 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #ADBAC7; letter-spacing: .8px; }
+    .center { font: 600 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #E6EDF3; letter-spacing: 1.2px; }
+    .center-sub { font: 400 12px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #768390; }
+    .loop-base { fill: none; stroke: #30363D; stroke-width: 2; path-length: 100; stroke-dasharray: 100; stroke-dashoffset: 100; animation: draw 1.1s cubic-bezier(.16,1,.3,1) .2s forwards; }
+    .trace { fill: none; stroke: #F0883E; stroke-width: 2.5; stroke-linecap: round; path-length: 100; stroke-dasharray: 8 92; stroke-dashoffset: 8; opacity: 0; animation: trace-in .01s linear 1.25s forwards, travel 8s linear 1.25s infinite; }
+    .node { fill: #0D1117; stroke: #768390; stroke-width: 1.5; opacity: 0; animation: node-in .35s cubic-bezier(.16,1,.3,1) forwards; }
     .n1 { animation-delay: .35s } .n2 { animation-delay: .47s } .n3 { animation-delay: .59s } .n4 { animation-delay: .71s }
     .n5 { animation-delay: .83s } .n6 { animation-delay: .95s } .n7 { animation-delay: 1.07s }
-    .gate { stroke: #BC4C00; }
+    .gate { stroke: #F0883E; }
     .pulse-ring, .pulse-core { opacity: 0; transform-box: fill-box; transform-origin: center; animation-duration: 8s; animation-timing-function: linear; animation-delay: var(--pulse-delay); animation-iteration-count: infinite; pointer-events: none; }
-    .pulse-ring { fill: none; stroke: #BC4C00; stroke-width: 1.5; animation-name: node-pulse; }
-    .pulse-core { fill: #BC4C00; animation-name: node-hit; }
+    .pulse-ring { fill: none; stroke: #F0883E; stroke-width: 1.5; animation-name: node-pulse; }
+    .pulse-core { fill: #F0883E; animation-name: node-hit; }
     .p1 { --pulse-delay: 1.25s } .p2 { --pulse-delay: 2.27s } .p3 { --pulse-delay: 3.31s }
     .p4 { --pulse-delay: 4.30s } .p5 { --pulse-delay: 4.78s } .p6 { --pulse-delay: 5.80s } .p7 { --pulse-delay: 7.28s }
     .copy { opacity: 0; animation: copy-in .6s cubic-bezier(.16,1,.3,1) .85s forwards; }
     @keyframes draw { to { stroke-dashoffset: 0 } }
     @keyframes trace-in { to { opacity: 1 } }
-    @keyframes travel { to { stroke-dashoffset: -100 } }
+    @keyframes travel { to { stroke-dashoffset: -92 } }
     @keyframes node-in { from { opacity: 0; transform: scale(.55) } to { opacity: 1; transform: scale(1) } }
     @keyframes node-pulse {
       0% { opacity: 0; transform: scale(.9) }
