@@ -28,9 +28,9 @@ Everything below is built on my own time, outside working hours. It is where I b
 ## Operating model
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/harness-loop-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/harness-loop-light.svg">
-  <img src="assets/harness-loop-dark.svg" alt="Closed-loop agent harness: brief, research, implementation, verification, review, merge and observation" width="880">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/harness-loop-dark-v2.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/harness-loop-light-v2.svg">
+  <img src="assets/harness-loop-dark-v2.svg" alt="Closed-loop agent harness: brief, research, implementation, verification, review, merge and observation" width="880">
 </picture>
 
 The harness is a closed control system, not a prompt chain. Research produces a bounded brief, implementation produces a diff, gates try to disprove it, and observation feeds the next pass. A failure returns to the stage that created the bad assumption instead of restarting the whole pipeline.
