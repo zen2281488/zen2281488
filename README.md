@@ -1,7 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
-  <img src="assets/header-dark.svg" alt="zen2281488 - QA Automation, harness and infrastructure for AI engineering" width="880">
+  <img src="assets/header-dark.svg" alt="zen2281488 - AI Platform Engineer with a QA Automation background" width="880">
 </picture>
 
 [![Telegram](https://img.shields.io/badge/Telegram-@zen__Warrior-1F2328?style=flat-square&logo=telegram&logoColor=F0883E)](https://t.me/zen_Warrior)
@@ -9,7 +9,9 @@
 [![Allure report](https://img.shields.io/badge/Live%20Allure%20report-1F2328?style=flat-square&logoColor=F0883E)](https://zen2281488.github.io/jqe_ui_api/)
 ![Profile views](https://komarev.com/ghpvc/?username=zen2281488&style=flat-square&color=F0883E&label=views)
 
-I write tests, and I write the machinery that decides whether anything is allowed to ship. Lately most of that machinery is pointed at AI-assisted development: agent harnesses, verification gates, and the infrastructure that keeps a generated diff reviewable.
+I build the platform layer for closed-loop AI-assisted software delivery: agent infrastructure, evaluation systems, verification gates, and feedback loops that keep generated changes measurable and reviewable. My background is in QA automation, so the system is designed around evidence: a change does not ship merely because it was generated successfully.
+
+**Academic foundation:** MSc in Applied Mathematics & Computer Science · MSc in Electrical Power Engineering
 
 ## Day job
 
@@ -17,9 +19,9 @@ I write tests, and I write the machinery that decides whether anything is allowe
 
 ## Independent work
 
-Everything below is built on my own time, outside working hours. It is where the AI infrastructure and product engineering happen.
+Everything below is built on my own time, outside working hours. It is where I build AI platform infrastructure and apply the same verification discipline to agentic software delivery and product engineering.
 
-**Harness and infrastructure for AI engineering.** Agent skills, hooks and subagent pipelines around LLM-assisted development. Cost and observability harnesses, verification gates, reversible-change workflows. The goal is a loop that stays measurable: every generated change lands small, behind a gate, with a way back. Same tools and same person before and after, so the only variable is the harness rather than the adoption of AI, and the throughput difference is about an order of magnitude per month. [How it is built](engineering/agent-harness.md).
+**AI platform and agent infrastructure.** Agent skills, hooks and multi-agent research and execution pipelines around LLM-assisted development. Evaluation systems, cost and observability harnesses, verification gates, reversible-change workflows. The goal is a loop that stays measurable: every generated change lands small, behind a gate, with a way back. Same tools and same person before and after, so the only variable is the harness rather than the adoption of AI, and the throughput difference is about an order of magnitude per month. [How it is built](engineering/agent-harness.md).
 
 **Product engineering.** A real-time 3D web client on Babylon.js and WebGPU with a clustered lighting pipeline and procedural map generation, on a Kotlin and Spring Boot server-authoritative backend. Held to the same CI discipline as the day-job test code, because that is the half I already know how to do properly.
 
