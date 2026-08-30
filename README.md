@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
-  <img src="assets/header-dark.svg" alt="zen2281488 - AI Platform Engineer with a QA Automation background" width="880">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark-v2.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light-v2.svg">
+  <img src="assets/header-dark-v2.svg" alt="zen2281488 - AI Platform Engineer with a QA Automation background" width="880">
 </picture>
 
 [![Telegram](https://img.shields.io/badge/Telegram-@zen__Warrior-1F2328?style=flat-square&logo=telegram&logoColor=F0883E)](https://t.me/zen_Warrior)
