@@ -5,6 +5,7 @@
 </picture>
 
 [![Telegram](https://img.shields.io/badge/Telegram-@zen__Warrior-1F2328?style=flat-square&logo=telegram&logoColor=F0883E)](https://t.me/zen_Warrior)
+[![Email](https://img.shields.io/badge/Email-henvanilehmj%40outlook.com-1F2328?style=flat-square&logo=microsoftoutlook&logoColor=F0883E)](mailto:henvanilehmj@outlook.com)
 [![Allure report](https://img.shields.io/badge/Live%20Allure%20report-1F2328?style=flat-square&logoColor=F0883E)](https://zen2281488.github.io/jqe_ui_api/)
 ![Profile views](https://komarev.com/ghpvc/?username=zen2281488&style=flat-square&color=F0883E&label=views)
 
