@@ -22,6 +22,18 @@ Everything below is built on my own time, outside working hours. It is where the
 
 **Product engineering.** A real-time 3D web client on Babylon.js and WebGPU with a clustered lighting pipeline and procedural map generation, on a Kotlin and Spring Boot server-authoritative backend. Held to the same CI discipline as the day-job test code, because that is the half I already know how to do properly.
 
+## Operating model
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/harness-loop-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/harness-loop-light.svg">
+  <img src="assets/harness-loop-dark.svg" alt="Closed-loop agent harness: brief, research, implementation, verification, review, merge and observation" width="880">
+</picture>
+
+The harness is a closed control system, not a prompt chain. Research produces a bounded brief, implementation produces a diff, gates try to disprove it, and observation feeds the next pass. A failure returns to the stage that created the bad assumption instead of restarting the whole pipeline.
+
+Research runs as a cascade: independent scouts inspect code, references and runtime evidence; a challenger searches for contradictions; a synthesizer turns only the surviving claims into acceptance criteria and a task graph. The detailed architecture, including worker roles, branch locks and failure routing, is in [the harness write-up](engineering/agent-harness.md#cascading-research-swarms).
+
 ## Stack
 
 **Languages**

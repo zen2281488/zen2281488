@@ -18,6 +18,18 @@ So the throughput ceiling is not how fast a model writes code. It is how fast yo
 
 The harness exists to move verification off the human and into machinery that runs unattended. The human moves up a level, to intent and acceptance criteria.
 
+## The closed control loop
+
+A prompt chain is open-loop: it produces code and stops. This harness continues until the change either survives independent evidence or is rejected. Every stage emits an inspectable artifact for the next stage: a research claim with provenance, an acceptance condition, a bounded diff, a test result, a review finding or an exact-revision runtime artifact.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/harness-loop-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="../assets/harness-loop-light.svg">
+  <img src="../assets/harness-loop-dark.svg" alt="Closed-loop agent harness: brief, research, implementation, verification, review, merge and observation" width="880">
+</picture>
+
+Rejection is routed, not sprayed across the whole system. A compile failure goes back to implementation. A disputed requirement goes back to research. An oracle that cannot reproduce its own baseline goes back to gate design. An exact-head runtime failure goes to integration. Production evidence becomes a new brief. Targeted routing preserves the evidence already earned and makes the failed assumption visible.
+
 ## Shape of the loop
 
 Each unit of work moves through fixed stages, and a stage that fails sends the work back rather than forward.
@@ -35,6 +47,55 @@ Each unit of work moves through fixed stages, and a stage that fails sends the w
 **Adversarial review.** Separate review passes with separate mandates: correctness, security, silent failures, type design, dead code. Splitting the mandates matters. A single "review this" pass returns praise. A pass told to find swallowed errors returns swallowed errors.
 
 **Reversibility.** Nothing lands that cannot be backed out cleanly. Volume is only safe when the cost of a wrong change is bounded.
+
+## Cascading research swarms
+
+The research layer is not a crowd of agents reading the same repository. It starts with one bounded decision and fans out across independent evidence surfaces. A code scout traces the current owner, callers and tests. A reference scout checks contracts, prior art and external implementations. A runtime scout inspects logs, captures and exact-revision artifacts. Their mandates do not overlap, so agreement is meaningful and disagreement is useful.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/research-cascade-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="../assets/research-cascade-light.svg">
+  <img src="../assets/research-cascade-dark.svg" alt="Cascading research swarm: independent scouts, challenger, synthesizer and targeted second pass" width="880">
+</picture>
+
+The next layer is adversarial. A challenger intersects the scout reports and looks for contradictions, missing provenance and conclusions that outrun their evidence. Only unresolved uncertainty spawns a second-order researcher, and that pass receives the exact disputed question instead of the whole original brief. The cascade grows where uncertainty survives, not where more agents happen to be available.
+
+The final synthesizer does not vote. It preserves the source of each claim, records what remains unknown, and converts stable conclusions into acceptance criteria, hard dependencies and named code or test owners. If the evidence is insufficient, the output stays uncertain. Confidence is not manufactured by consensus.
+
+| Role | Question | Output |
+| --- | --- | --- |
+| Code scout | What owns this behaviour now? | Current owner, callers, tests, collision points |
+| Reference scout | What contract or known implementation constrains it? | Relevant decisions, algorithms and adaptation limits |
+| Runtime scout | What does the exact system actually do? | Logs, captures, measurements and reproducible symptoms |
+| Challenger | Where do the reports conflict or overclaim? | Disputed assumptions and focused second-pass questions |
+| Synthesizer | What can safely become work? | Acceptance, dependencies, provenance and explicit unknowns |
+
+## Parallelism without pretending everything commutes
+
+Concurrency comes from the task graph, not from the number of available agents. Hard dependencies remain serial. Semantic mutexes protect concepts that can collide even when files do not, such as a durable schema or wire contract. Physical hotspots are treated as architecture problems: a small registration seam can create more safe parallel width than splitting one task into ten vague tickets.
+
+A deterministic task branch is the lease. Creating the expected branch from fresh `main` wins the task; finding that branch already present loses it. That replaces comment-based ownership, heartbeat polling and most coordination traffic with a Git primitive that is already durable and auditable.
+
+The swarm has three role families. Feature workers take one bounded product slice from current `main` through implementation and self-review. Integration workers test the integrated head and repair failures that only appear when independent slices meet. Recovery workers classify abandoned branches and salvage useful checkpoints without forcing every feature worker to perform repository archaeology.
+
+This split matters because implementation, verification and recovery have different optimal batch sizes. Product work stays small. Integration checks the state users will actually receive. Recovery is batched so coordination does not consume the same budget as code.
+
+## Review as a routed search
+
+"Review this change" is too broad a prompt. Separate passes receive separate failure mandates: behavioural correctness, security boundaries, silent fallback, type design, dead paths and evidence quality. A reviewer reports findings against the exact head it inspected, so a later commit cannot inherit an earlier approval.
+
+Findings return to the owner of the failed assumption:
+
+| Finding | Routed back to |
+| --- | --- |
+| Requirement is unsupported or ambiguous | Research and acceptance |
+| Test passes on a known-bad fixture | Oracle or gate design |
+| Diff violates the accepted contract | Implementation |
+| Independent slices fail together on current `main` | Integration and repair |
+| Runtime or visual evidence disagrees with green checks | Domain oracle, then implementation |
+| Production observation reveals a new failure mode | A new bounded brief |
+
+The loop closes because merge is not the end of evidence. It is the point where observed behaviour can challenge the assumptions that survived pre-merge review.
 
 ## What keeps it honest
 
